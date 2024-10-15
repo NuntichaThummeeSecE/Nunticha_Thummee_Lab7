@@ -16,8 +16,20 @@ const createCloseButton = (newItem) => {
     return xButton;
 }
 
+//function mark the task as completed//
 
-//function add input from the user,checkbox and close button funtion into ul//
+const markTask = (checkBox, newItem) => {
+    checkBox.addEventListener(`change`, () => {
+        if (checkBox.checked) {
+            newItem.style.textDecoration = 'line-through';
+        } else {
+            newItem.style.textDecoration = 'none';
+        }
+    });
+}
+
+
+//main function add input from the user,checkbox ,close button and call other function //
 const addPlan = () => {
     const userInput = textInput.value;
     let newItem = document.createElement(`li`);
@@ -25,6 +37,7 @@ const addPlan = () => {
     checkBox.type = `checkbox`;
     let closeButton = createCloseButton(newItem);
 
+    markTask(checkBox, newItem);
     newItem.appendChild(checkBox);
     newItem.appendChild(document.createTextNode(userInput));
     newItem.appendChild(closeButton);
