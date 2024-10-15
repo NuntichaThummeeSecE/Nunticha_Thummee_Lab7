@@ -3,15 +3,9 @@ const container = document.getElementById(`listBox`);
 const textInput = document.getElementById(`typeBox`);
 
 
+//create close button and return - funtion remove li while click //
 
-//function add input from the user and checkbox into ul//
-const addPlan = () => {
-    const userInput = textInput.value;
-    let newItem = document.createElement(`li`);
-
-    let checkBox = document.createElement(`input`)
-    checkBox.type = `checkbox`;
-
+const createCloseButton = (newItem) => {
     let xButton = document.createElement(`button`)
     xButton.textContent = `x`;
 
@@ -19,9 +13,21 @@ const addPlan = () => {
         container.removeChild(newItem);
     });
 
+    return xButton;
+}
+
+
+//function add input from the user,checkbox and close button funtion into ul//
+const addPlan = () => {
+    const userInput = textInput.value;
+    let newItem = document.createElement(`li`);
+    let checkBox = document.createElement(`input`)
+    checkBox.type = `checkbox`;
+    let closeButton = createCloseButton(newItem);
+
     newItem.appendChild(checkBox);
     newItem.appendChild(document.createTextNode(userInput));
-    newItem.appendChild(xButton);
+    newItem.appendChild(closeButton);
     container.appendChild(newItem);
 }
 
