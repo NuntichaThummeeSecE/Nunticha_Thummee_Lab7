@@ -1,10 +1,12 @@
 const addNewItem = document.getElementById("addButton");
-const container = document.getElementsByClassName("container")[0];
+const container = document.getElementById("listBox");
+const typeBox = document.getElementById("typeBox");
 
 addNewItem.addEventListener("click", addPlan);
 
 function addPlan(){
+    const itemValue = typeBox.value;
     let newItem = document.createElement("li");
-    newItem.innerHTML = addNewItem.value;
+    newItem.innerHTML = itemValue; 
     container.appendChild(newItem);
 }
