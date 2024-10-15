@@ -5,10 +5,14 @@
     box-shadow: 0 2px 4px 0 rgb(132, 74, 74);
     width: 40%;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
     padding: 2%;
 }
 
-li{
-    
+ul{
+    list-style: none;
+}
+
+ul li.checked{
+    color: navy
 }
