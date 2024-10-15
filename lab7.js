@@ -2,9 +2,21 @@ const addNewItem = document.getElementById(`addButton`);
 const container = document.getElementById(`listBox`);
 const typeBox = document.getElementById(`typeBox`);
 
+const addPlan = () => {
+    const userInput = typeBox.value;
+    let newItem = document.createElement(`li`);
+
+    let checkBox = document.createElement(`input`)
+    checkBox.type = `checkbox`;
+
+    container.appendChild(newItem);
+
+    newItem.innerHTML = (`${checkBox.outerHTML} ${userInput}`);
+}
+
 addNewItem.addEventListener(`click`, addPlan);
 
-function addPlan() {
+/*function addPlan() {
     const userInput = typeBox.value;
     let newItem = document.createElement(`li`);
 
@@ -14,6 +26,8 @@ function addPlan() {
     newItem.appendChild(checkBox);
     container.appendChild(newItem);
 
-    newItem.innerHTML = `${checkBox.outerHTML} ${userInput}`;
-}
+    newItem.innerHTML = (`${checkBox.outerHTML} ${userInput}`);
+}*/
+
+
 
