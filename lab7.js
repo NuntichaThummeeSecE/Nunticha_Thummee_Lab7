@@ -6,8 +6,13 @@ addNewItem.addEventListener("click", addPlan);
 
 function addPlan() {
     const userInput = typeBox.value;
-    let newItem = document.createElement("li");
+    let newItem = document.createElement("li");   
     newItem.innerHTML = userInput;
+
+    let checkBox = document.createElement("input")
+    checkBox.type = "checkbox"; 
+
+    newItem.appendChild(checkBox);
     container.appendChild(newItem);
 }
 
