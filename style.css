@@ -1,0 +1,14 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    box-shadow: 0 2px 4px 0 rgb(132, 74, 74);
+    width: 40%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2%;
+}
+
+li{
+    
+}
