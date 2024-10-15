@@ -2,6 +2,9 @@ const addNewItem = document.getElementById(`addButton`);
 const container = document.getElementById(`listBox`);
 const textInput = document.getElementById(`typeBox`);
 
+
+
+//function add input from the user and checkbox into ul//
 const addPlan = () => {
     const userInput = textInput.value;
     let newItem = document.createElement(`li`);
@@ -9,11 +12,20 @@ const addPlan = () => {
     let checkBox = document.createElement(`input`)
     checkBox.type = `checkbox`;
 
-    container.appendChild(newItem);
+    let xButton = document.createElement(`button`)
+    xButton.textContent = `x`;
+
+    xButton.addEventListener(`click`, () => {
+        container.removeChild(newItem);
+    });
+
     newItem.appendChild(checkBox);
     newItem.appendChild(document.createTextNode(userInput));
+    newItem.appendChild(xButton);
+    container.appendChild(newItem);
 }
 
 addNewItem.addEventListener(`click`, addPlan);
+
 
 
