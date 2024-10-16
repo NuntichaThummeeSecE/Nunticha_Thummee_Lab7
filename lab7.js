@@ -13,6 +13,8 @@ const createCloseButton = (newItem) => {
         container.removeChild(newItem);
     });
 
+    xButton.classList.add('xButtonStyle');
+
     return xButton;
 }
 
