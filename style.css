@@ -1,15 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
 .card {
     display: flex;
     flex-direction: column;
     background-color: pink;
     box-shadow: 0 2px 4px 0 rgb(132, 74, 74);
     width: 40%;
+    height: auto;
+    max-width: 300px;
     border-radius: 10px;
-    text-align: left;
+    text-align: center;
     padding: 2%;
+    box-sizing: border-box; 
 }
 
-ul{
+ul {
     list-style: none;
+    text-align: left;
+}
+
+.card h1 {
+    text-align: center;
+}
+
+.card ::placeholder {
+    text-align: center;
+}
+
+li {
+    width: 100%;
+    padding: 10px;
 }
 
