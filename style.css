@@ -2,6 +2,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10%;
+    background-color: rgb(255, 237, 240);
 }
 
 .card {
@@ -20,7 +21,8 @@ body {
 
 ul {
     list-style: none;
-    text-align: left;
+    padding: 0; 
+    margin: 0;
 }
 
 .card h1 {
@@ -36,6 +38,8 @@ li {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     color: rgb(127, 0, 36);
+    text-align: left;
+
 }
 
 #addButton {
@@ -71,24 +75,24 @@ input {
 input::placeholder {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    color:pink;
-    text-align: center; 
-    opacity: 60%; 
+    color: pink;
+    text-align: center;
+    opacity: 60%;
 }
 
-input:hover{
+input:hover {
     background-color: rgb(127, 0, 36);
     color: white;
 }
 
-input:focus{
+input:focus {
     background-color: rgb(127, 0, 36);
     color: white;
-    outline: none; 
+    outline: none;
 }
 
-.xButtonStyle{
-    background-color:white;
+.xButtonStyle {
+    background-color: white;
     border: none;
     border-radius: 10px;
     color: rgb(127, 0, 36);
@@ -97,7 +101,7 @@ input:focus{
     margin-left: 5%;
 }
 
-.xButtonStyle:hover{
+.xButtonStyle:hover {
     background-color: rgb(127, 0, 36);
     color: white;
 }
