@@ -6,7 +6,7 @@ const textInput = document.getElementById(`typeBox`);
 //create close button and return - funtion remove li while click //
 
 const createCloseButton = (newItem) => {
-    let xButton = document.createElement(`button`)
+    const xButton = document.createElement(`button`)
     xButton.textContent = `x`;
 
     xButton.addEventListener(`click`, () => {
@@ -32,10 +32,10 @@ const markTask = (checkBox, newItem) => {
 //main function add input from the user,checkbox ,close button and call other function //
 const addPlan = () => {
     const userInput = textInput.value;
-    let newItem = document.createElement(`li`);
-    let checkBox = document.createElement(`input`)
+    const newItem = document.createElement(`li`);
+    const checkBox = document.createElement(`input`)
     checkBox.type = `checkbox`;
-    let closeButton = createCloseButton(newItem);
+    const closeButton = createCloseButton(newItem);
 
     markTask(checkBox, newItem);
     newItem.appendChild(checkBox);
